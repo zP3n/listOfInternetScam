@@ -1,0 +1,9 @@
+(function($){'use strict';const register={randomInteger:function(min,max){return Math.floor(min+Math.random()*(max+1-min));},replaceAt:function(string,index,replace){return string.substring(0,index)+replace+string.substring(index+1);},generateRandomString:function(length){let result='';let characters='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';let charactersLength=characters.length;for(let i=0;i<length;i++){result+=characters.charAt(Math.floor(Math.random()*charactersLength));}
+return result;},generateRandomPass:function(length){let password=this.generateRandomString(length);let index;let indexes=[];if(!/[A-Z]/.test(password)){index=this.randomInteger(0,length-1);while(password[index].toUpperCase()==password[index]||indexes.includes(index)){index=this.randomInteger(0,length-1);}
+indexes.push(index);password=this.replaceAt(password,index,password[index].toUpperCase());}
+if(!/[a-z]/.test(password)){index=this.randomInteger(0,length-1);while(password[index].toLowerCase()==password[index]||indexes.includes(index)){index=this.randomInteger(0,length-1);}
+indexes.push(index);password=this.replaceAt(password,index,password[index].toLowerCase());}
+if(!/[0-9]/.test(password)){index=this.randomInteger(0,length-1);while(indexes.includes(index)){index=this.randomInteger(0,length-1);}
+indexes.push(index);password=this.replaceAt(password,index,this.randomInteger(0,9));}
+if(!/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{6,12}$/.test(password)){return this.generateRandomPass(length);}
+return password;}};$(document).ready(function(){$('.password-row .Password').val(register.generateRandomPass(10)).attr('type','text');$('.generate-pass').on('click',function(){const password=$(this).closest('.password-row').find('.Password');password.val(register.generateRandomPass(10)).change();});})})(jQuery);

@@ -1,0 +1,156 @@
+.select2-container {
+	width: 350px !important;
+    max-width: 100% !important;
+}
+.select2-container--default .select2-selection--single {
+	font-size: 14px !important; 
+    line-height: 55px !important;
+	background-color: #eeeeee !important;
+    border: 1px solid #0c5275 !important;
+    border-radius: 6px !important;
+    height: 55px !important;
+    text-align: center !important;
+    background-image: linear-gradient(0deg,#e6e6e6,#fff) !important; 
+}
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+	line-height: 55px !important;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+	height: 55px !important;
+} 
+.flag-icon {
+	margin-right: 5px;
+}
+.gtd-leads-form .col-xs-5 {
+	padding-right: 4px;
+}
+.gtd-leads-form .col-xs-7 {
+	padding-left: 4px;
+}
+
+.gtd-video-title { 
+	left: auto !important;
+	right: 30px !important;
+}
+
+@media (min-width: 768px) {	
+	.section-2 .f:not(.Password){height: 34px;padding: 3px 3px;}
+	.section-2 .f.Password{padding-left: 3px;padding-right: 3px;}
+	.section-2 .form-block {padding-bottom:1px}
+	[data-country="IT"] .section-2 .form-block strong.bold-text{font-size: 22px;line-height: 22px;}
+}
+@media (min-width: 1000px) {		
+	.section-2 .f:not(.phone){padding-left: 10px!important;padding-right: 10px!important;}
+}
+
+/*password*/
+.password-row{ 
+    display: flex;
+    flex-wrap: nowrap;
+    line-height: 1;
+}
+ .password-row .Password{
+  padding-right: 2px;
+  margin-bottom: 0;width: 100%;
+}
+
+.password-row .generate-pass {
+	margin: 0;    line-height: 14px;
+	text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    min-width: 130px;
+    height: 100%;
+    font-size: 14px!important;
+    font-weight: 400;
+    text-transform: none;
+    background: #e7e7e7;
+    color: #000;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    width: 100%;
+	color: #36434f;
+	background-color: #ecbe23;
+	background-image: linear-gradient(to bottom, #fee144, #dba007);  
+  font-size: 14px;
+  font-weight: 600;
+  /*line-height: 16px;*/
+  padding-bottom: 2px;
+  transition: 0.3s;    
+}
+.password-row .generate-pass:hover{
+  background-image: linear-gradient(to top, #fee144, #dba007);
+  transition: 0.3s;
+}
+.password-row-item:first-of-type {
+     margin-right: 3px;
+    flex-basis: 66%;
+}
+.password-row-item:last-of-type {
+   margin-left: 3px;
+    flex-basis: 34%;
+}
+
+html .loader  {
+  background: none repeat scroll 0 0 #ffffff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 99999;
+  display:none;    opacity: 0.6;
+}
+html .loader  .loader_inner {
+  background-image: url("/images/ajax-loader.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: #fff;
+  height: 60px;
+  width: 60px;
+  margin-top: -30px;
+  margin-left: -30px;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+}
+
+/*smsBlock*/
+.smsBlock{display: flex;    flex-wrap: nowrap;    line-height: 1;width: 100%;-margin: 0 auto 0;}
+.smsBlock input{  padding-right: 2px;  margin-bottom: 0;width: 100%;}
+.smsBlock button {
+	margin: 0;    line-height: 16px;
+	text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    min-width: 130px;
+    min-height: 34px;
+	height: 100%!important;
+    font-size: 14px!important;
+    font-weight: 400;
+    text-transform: none;
+    background: #e7e7e7;
+    color: #000;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    width: 100%;
+  color: #36434f;
+  background-color: #ecbe23;
+  background-image: linear-gradient(to bottom, #fee144, #dba007);
+  font-size: 14px;
+  font-weight: 600;
+  padding-bottom: 2px;
+  transition: 0.3s;    
+}
+/*.section-2 .smsBlock button { min-height: 34px;	height: 34px!important;}*/
+.smsBlock button:hover{  background-image: linear-gradient(to top, #fee144, #dba007);  transition: 0.3s;}
+.smsBlock .sms-row-item:first-of-type {     margin-right: 3px;    flex-basis: 66%;}
+.smsBlock .sms-row-item:last-of-type {   margin-left: 3px;    flex-basis: 34%;}
+.stepSMS1 .smsBlock{text-align: center;display: block;}
+.stepSMS1 .smsBlock .sms-row-item:first-of-type,.stepSMS1 button[type="submit"]{display:none!important}
+.stepSMS1 .smsBlock .sms-row-item:last-of-type {margin: 0;}

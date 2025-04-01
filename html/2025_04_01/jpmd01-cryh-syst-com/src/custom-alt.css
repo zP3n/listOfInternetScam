@@ -1,0 +1,159 @@
+@import url("../ajax/libs/font-awesome/5.9.0/css/all.min.css");
+.form-group,
+.form-body,
+.form-control {
+    position: relative;
+}
+
+.select2 {
+    display: none !important;
+}
+
+.iti {
+    color: #333;
+    font-size: 14px;
+    width: 100%;
+}
+
+.iti input {
+    padding-left: 15px;
+    max-width: 100%;
+    display: block;
+}
+
+.gtd-form-wrapper .row,
+.popup-form-body .row {
+    margin-left: -5px;
+    margin-right: -5px;
+}
+
+.gtd-form-wrapper .row [class*="col-"],
+.popup-form-body .row [class*="col-"] {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.button-gen-password {
+    font-size: 11px;
+    color: #ffffff;
+    line-height: 1em;
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    height: 55px;
+    background-color: #fbaf41;
+    border-radius: 6px;
+    padding: 5px;
+    cursor: pointer;
+    -webkit-transition: opacity 0.3s ease;
+    -o-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
+    border: 1px solid #9b6517;
+}
+
+.button-gen-password:hover {
+    opacity: 0.9;
+}
+
+.toggle-gen-password {
+    position: absolute;
+    right: 15px;
+    z-index: 1;
+    top: 50%;
+    cursor: pointer;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    color: #333;
+}
+html:lang(ar) .toggle-gen-password {
+    left: 15px;
+    right: auto;
+}
+
+.toggle-gen-password .after {
+    display: none;
+}
+
+.toggle-gen-password.is-active .before {
+    display: none;
+}
+
+.toggle-gen-password.is-active .after {
+    display: block;
+}
+
+.gtd-common-form input,
+.gtd-optins-form input,
+.gtd-leads-form input {
+    position: relative;
+    border: 1px solid #ced4da;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.gtd-common-form input:not(:placeholder-shown),
+.gtd-optins-form input:not(:placeholder-shown),
+.gtd-leads-form input:not(:placeholder-shown) {
+    border-color: rgba(206, 212, 218, 0.5);
+}
+
+.gtd-common-form input:invalid:not(:placeholder-shown),
+.gtd-optins-form input:invalid:not(:placeholder-shown),
+.gtd-leads-form input:invalid:not(:placeholder-shown) {
+    border-color: #eb172b;
+}
+
+.gtd-common-form input:not(:invalid):not(:placeholder-shown),
+.gtd-optins-form input:not(:invalid):not(:placeholder-shown),
+.gtd-leads-form input:not(:invalid):not(:placeholder-shown) {
+    border-color: #249e2c;
+}
+
+.gtd-common-form input:not(:invalid):not(:placeholder-shown)~.icon:after,
+.gtd-optins-form input:not(:invalid):not(:placeholder-shown)~.icon:after,
+.gtd-leads-form input:not(:invalid):not(:placeholder-shown)~.icon:after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f00c";
+    color: #249e2c;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+html:lang(ar) .gtd-common-form input:not(:invalid):not(:placeholder-shown)~.icon:after,
+html:lang(ar) .gtd-optins-form input:not(:invalid):not(:placeholder-shown)~.icon:after,
+html:lang(ar) .gtd-leads-form input:not(:invalid):not(:placeholder-shown)~.icon:after {
+    left: 15px;
+    right: auto;
+    /* style rules here */
+}
+
+.gtd-common-form input:not(:invalid):not(:placeholder-shown)~.iti__selected-flag,
+.gtd-optins-form input:not(:invalid):not(:placeholder-shown)~.iti__selected-flag,
+.gtd-leads-form input:not(:invalid):not(:placeholder-shown)~.iti__selected-flag {
+    font-size: 20px;
+}
+
+input.phone {
+    -background-image: none !important;
+    padding-left: 99px !important;
+}
+
+.form-body {
+    margin-top: auto;
+}
+.iti__country-list {
+    color: #000;
+}
