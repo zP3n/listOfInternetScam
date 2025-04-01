@@ -1,6 +1,11 @@
 # Project of listup scammer
-This project is making list of internet scammers.  
-If you find new scam site, please pull request to this project.
+このプロジェクトは詐欺の手口を集めて対策する機会を提供するものです
+もし詐欺のサイトを見つけた場合、リンクをIssueに送ってください。
+すぐにコピーして手口を記録します。  
+
+This project provides an opportunity to collect scam tactics and counter them.  
+If you find a scam site, please send the link to Issue.  
+We will copy it immediately and record the clues.  
 
 ## now progless  
 8 sites  
