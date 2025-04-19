@@ -8,7 +8,7 @@
 **Type:** File download  
 **How to scam:** [here](./api-applycloudfiles-com/description.md)  
 **Caution!** This page is **copy of scam site**. **Be careful!** You **haven't download** the file!  
-[api-applycloudfiles-com/=rt?abcdefghijklmn012345](./api-applycloudfiles-com/%3Frt%3Dabcdefghijklmn012345/)
+[api-applycloudfiles-com/=rt?abcdefghijklmn012345](./api-applycloudfiles-com/%3Frt%3Dabcdefghijklmn012345/index.html)
 
 ## 3rd site https://nonesuches[.]pics/movion_m/?cost=0.0010000000474974513&external_id=1745101892295798402&ad_campaign_id=1166&source=a2f6e47513&zone_id=13716&country=JP&os=Windows  
 **Type:** File download & Fake Captcha  
